@@ -6,8 +6,70 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
-    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    Background="MintCream" d:DesignHeight="913" d:DesignWidth="637">
 
-    <Grid>
-    </Grid>
+    <Border Margin="30">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="325"/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <TextBlock Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="3" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="32" FontFamily="ALGERIAN" FontWeight="Light">Tic-Tac-Toe Game</TextBlock>
+                <StackPanel Grid.Row="1" Grid.Column="0">
+                    <TextBlock HorizontalAlignment="Center" FontSize="28" FontFamily="ALGERIAN" FontWeight="Light">Player 1</TextBlock>
+                    <TextBlock HorizontalAlignment="Center" FontSize="28" FontFamily="Times New Roman" FontWeight="Bold">X</TextBlock>
+                </StackPanel>
+                <StackPanel Grid.Row="1" Grid.Column="1">
+                    <TextBlock HorizontalAlignment="Center" FontSize="28" FontFamily="ALGERIAN" FontWeight="Light">Score</TextBlock>
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                        <TextBlock x:Name="firstPlayerScore" HorizontalAlignment="Center" FontSize="28" FontFamily="Times New Roman" FontWeight="Bold">0</TextBlock>
+                        <TextBlock HorizontalAlignment="Center" FontSize="28" FontFamily="Times New Roman" FontWeight="Bold">:</TextBlock>
+                        <TextBlock x:Name="secondPlayerScore" HorizontalAlignment="Center" FontSize="28" FontFamily="Times New Roman" FontWeight="Bold">0</TextBlock>
+                    </StackPanel>
+                </StackPanel>
+                <StackPanel Grid.Row="1" Grid.Column="2">
+                    <TextBlock HorizontalAlignment="Center" FontSize="28" FontFamily="ALGERIAN" FontWeight="Light">Player 2</TextBlock>
+                    <TextBlock HorizontalAlignment="Center" FontSize="28" FontFamily="Times New Roman" FontWeight="Bold">O</TextBlock>
+                </StackPanel>
+                <StackPanel Grid.Row="2" Grid.Column="1">
+                    <TextBlock HorizontalAlignment="Center" FontSize="28" FontFamily="ALGERIAN" FontWeight="Light">Turn</TextBlock>
+                    <TextBlock x:Name="currentSymbolTurn" HorizontalAlignment="Center" FontSize="28" FontFamily="Times New Roman" FontWeight="Bold"></TextBlock>
+                </StackPanel>
+            </Grid>
+            <Grid Grid.Row="1" BorderBrush="Black" BorderThickness="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Button x:Name="Button1"  Click="Button_Click" CommandParameter="col=0 row=0" Grid.Row="0" Grid.Column="0" FontSize="70" HorizontalAlignment="Stretch" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" VerticalAlignment="Stretch" Background="White" BorderBrush="Black" BorderThickness="1"/>
+                <Button x:Name="Button2" Click="Button_Click" CommandParameter="col=0 row=1" Grid.Row="0" Grid.Column="1" FontSize="70" HorizontalAlignment="Stretch" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" VerticalAlignment="Stretch" Background="White" BorderBrush="Black" BorderThickness="1"/>
+                <Button x:Name="Button3" Click="Button_Click" CommandParameter="col=0 row=2" Grid.Row="0" Grid.Column="2" FontSize="70" HorizontalAlignment="Stretch" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" VerticalAlignment="Stretch" Background="White" BorderBrush="Black" BorderThickness="1"/>
+                <Button x:Name="Button4" Click="Button_Click" CommandParameter="col=1 row=0" Grid.Row="1" Grid.Column="0" FontSize="70" HorizontalAlignment="Stretch" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" VerticalAlignment="Stretch" Background="White" BorderBrush="Black" BorderThickness="1"/>
+                <Button x:Name="Button5" Click="Button_Click" CommandParameter="col=1 row=1" Grid.Row="1" Grid.Column="1" FontSize="70" HorizontalAlignment="Stretch" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" VerticalAlignment="Stretch" Background="White" BorderBrush="Black" BorderThickness="1"/>
+                <Button x:Name="Button6" Click="Button_Click" CommandParameter="col=1 row=2" Grid.Row="1" Grid.Column="2" FontSize="70" HorizontalAlignment="Stretch" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" VerticalAlignment="Stretch" Background="White" BorderBrush="Black" BorderThickness="1"/>
+                <Button x:Name="Button7" Click="Button_Click" CommandParameter="col=2 row=0" Grid.Row="2" Grid.Column="0" FontSize="70" HorizontalAlignment="Stretch" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" VerticalAlignment="Stretch" Background="White" BorderBrush="Black" BorderThickness="1"/>
+                <Button x:Name="Button8" Click="Button_Click" CommandParameter="col=2 row=1" Grid.Row="2" Grid.Column="1" FontSize="70" HorizontalAlignment="Stretch" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" VerticalAlignment="Stretch" Background="White" BorderBrush="Black" BorderThickness="1"/>
+                <Button x:Name="Button9" Click="Button_Click" CommandParameter="col=2 row=2" Grid.Row="2" Grid.Column="2" FontSize="70" HorizontalAlignment="Stretch" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" VerticalAlignment="Stretch" Background="White" BorderBrush="Black" BorderThickness="1"/>
+            </Grid>
+
+        </Grid>
+    </Border>
 </Page>
+    
